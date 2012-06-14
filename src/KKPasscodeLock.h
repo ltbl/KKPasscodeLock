@@ -47,6 +47,6 @@
 
 @property (nonatomic,assign) NSUInteger attemptsAllowed;
 
-@property (nonatomic,copy) UIColor *backgroundColor;
+@property (nonatomic,retain) UIColor *backgroundColor;
 
 @end
