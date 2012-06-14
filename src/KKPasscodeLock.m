@@ -26,6 +26,7 @@ static KKPasscodeLock *sharedLock = nil;
 
 @synthesize eraseOption = _eraseOption;
 @synthesize attemptsAllowed = _attemptsAllowed;
+@synthesize backgroundColor = _backgroundColor;
 
 + (KKPasscodeLock*)sharedLock
 {
@@ -34,6 +35,7 @@ static KKPasscodeLock *sharedLock = nil;
 			sharedLock = [[self alloc] init];
 			sharedLock.eraseOption = YES;
 			sharedLock.attemptsAllowed = 5;
+            sharedLock.backgroundColor = [UIColor groupTableViewBackgroundColor];
 		}
 	}
 	return sharedLock;

@@ -54,7 +54,7 @@
 	_enterPasscodeTableView.delegate = self;
 	_enterPasscodeTableView.dataSource = self;
 	_enterPasscodeTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-	_enterPasscodeTableView.backgroundColor = [UIColor groupTableViewBackgroundColor];
+	_enterPasscodeTableView.backgroundColor = [[KKPasscodeLock sharedLock] backgroundColor];
 	[self.view addSubview:_enterPasscodeTableView];
 	
 	_setPasscodeTableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
@@ -62,7 +62,7 @@
 	_setPasscodeTableView.delegate = self;
 	_setPasscodeTableView.dataSource = self;
 	_setPasscodeTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-	_setPasscodeTableView.backgroundColor = [UIColor groupTableViewBackgroundColor];
+	_setPasscodeTableView.backgroundColor = [[KKPasscodeLock sharedLock] backgroundColor];
 	[self.view addSubview:_setPasscodeTableView];
 	
 	_confirmPasscodeTableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
@@ -70,7 +70,7 @@
 	_confirmPasscodeTableView.delegate = self;
 	_confirmPasscodeTableView.dataSource = self;
 	_confirmPasscodeTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-	_confirmPasscodeTableView.backgroundColor = [UIColor groupTableViewBackgroundColor];
+	_confirmPasscodeTableView.backgroundColor = [[KKPasscodeLock sharedLock] backgroundColor];
 	[self.view addSubview:_confirmPasscodeTableView];
 }
 
